@@ -1,5 +1,13 @@
 <span style="color:Red"><font size=6.5><h><b> !!WARNING THIS WEBPAGE IS VULNERABLE!!</font></span>
 
+# Changes
+
+Added annoyance counter measures:
+
+- index.php is now a captcha with a 5 sec rate limiter
+- admin.php is a honeypot exposed admin page that blocks the ip address of the user that trys to reset an account (just adds  ip to a database, will have to be configured with ufw script and cron job separately)
+- functional login, currently users have to be added through mysql db "user_data"
+
 
 # How to Setup - Clippy PHPIDS w/ minor XSS blocking
 
@@ -51,3 +59,5 @@ sudo a2enmod php7.4
 sudo systemctl restart apache2
 
 ```
+
+
